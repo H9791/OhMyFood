@@ -21,7 +21,6 @@
 
 
 body{
-    
     margin-left:auto;
     margin-right: auto;
     width: 375px;
@@ -72,7 +71,6 @@ header{
     margin-bottom: 0px;
     /*position: relative;
     top:20px;*/
-    
 }
 
 .reservation{
@@ -81,14 +79,11 @@ header{
     justify-content: space-around;
     padding: 30px 30px;
     background-color: var(--background-color);
-    
 }
 
 .reservation p {
     width: 315px;
     text-align: center;
-    
-
 }
 
 .btn{
@@ -111,7 +106,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
 
 
@@ -134,7 +128,6 @@ header{
 
 .btn-text {
     width: 75%;
-
 }
 
 .mobile{
@@ -146,7 +139,6 @@ header{
     position: relative;
     right: 40px;
     color: var(--white-color);
-    
 }
 
 .ellipse{
@@ -226,6 +218,9 @@ header{
     
 }
 
+.ml-10{
+    margin-left: 10px;
+}
 /*.icon-footer{
     height:15px;
     width: 15px;
