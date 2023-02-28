@@ -1,5 +1,7 @@
 :root {
     --green-color: #99E2D0;
+    --grey-color: #353535;
+
 }
 
 body,
@@ -10,6 +12,10 @@ h1, h2 {
 
 html {
     min-width: 320px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -103,11 +109,11 @@ header {
 
 .h2-course {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .h2-course-sousligne {
-    width: 80px;
+    width: 55px;
     border-top: 5px solid var(--green-color);
     margin-bottom: 20px;
 }
@@ -125,6 +131,7 @@ header {
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    margin-bottom:20px;
     gap: 20px;
 }
 
@@ -149,7 +156,7 @@ header {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 
@@ -196,3 +203,21 @@ header {
 .c {
     flex-shrink: 0;
 }*/
+
+.footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--grey-color);
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+/*ALL FLEXBOX ITEMS THE SAME PADDING*/
+.footer>*{
+    padding-top:10px;
+    
+}
