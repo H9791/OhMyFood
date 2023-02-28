@@ -1,6 +1,10 @@
+:root {
+    --green-color: #99E2D0;
+}
+
 body,
 p,
-h1 {
+h1, h2 {
     margin: 0;
 }
 
@@ -81,25 +85,36 @@ header {
 }
 
 
-/*
-.repas>a{
+
+.repas a{
     display: none;
-}*/
-.repas:hover>a{
+}
+.repas:hover a {
     display: initial;
-    
-}
-
-.check-center{
 
 }
+/*
+.h2-sousligne {
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: green;
+    text-decoration-thickness: 3px;
+}*/
 
+.h2-course {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.h2-course-sousligne {
+    width: 80px;
+    border-top: 5px solid var(--green-color);
+    margin-bottom: 20px;
+}
 
 .course {
     display: flex;
     flex-direction: column;
-    
     background-color: #f7f7f7;
     margin-top: -50px;
     padding: 20px;
@@ -109,33 +124,24 @@ header {
 .trois-repas {
     display: flex;
     flex-direction: column;
-    
     min-width: 300px;
-    
     gap: 20px;
 }
 
-
-
-
-
-
-
-  .ok-check {
+.ok-check {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgreen;
+    background-color: var(--green-color);
     width: 59px;
     height: 69px;
-    /*margin-right: 0px;*/
     border-radius: 0 15px 15px 0;
 }
 
 .repas {
     display: flex;
     flex-direction: row;
-    
+
     justify-content: space-between;
     align-items: space-between;
 
@@ -149,45 +155,44 @@ header {
 
 .repas-descrip {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     justify-content: space-between;
     /*background-color: white;*/
-    width:100%;
-    
+    width: 100%;
+
     border-radius: 15px;
 }
 
-.together-row{
+.repas-flex-row {
     display: flex;
-    gap:10px;
+    align-items: flex-end;
 }
 
-.together-column{
+.repas-flex-column {
     display: flex;
     flex-direction: column;
-    /**/
-    flex: 1;
-    min-width: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    /**/
-}
-
-.no-wrap{
-    flex: 1;
-    min-width: 0;
+    justify-content: space-evenly;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.desc-prix {
+.no-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+/* .desc-prix {
     display: flex;
     justify-content: space-between;  
-}
+} */
 
+/*
 .c {
     flex-shrink: 0;
-    /*margin-left: 16px;*/
-}
+}*/
