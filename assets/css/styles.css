@@ -1,5 +1,6 @@
 html {
     min-width: 320px;
+    max-width: 1440px;
 }
 
 h1,
@@ -52,6 +53,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+    margin:0;
 }
 
 
@@ -61,6 +63,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    margin:0;
 }
 
 .roboto-300-17 {
@@ -69,6 +72,7 @@ body {
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
+    margin:0;
 }
 
 .roboto-500-16 {
@@ -203,25 +207,28 @@ header {
 .mob-text {
     width: 220px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    padding-left: 20px;
 }
 
-/*
-.btn-text {
-
-}
-.mobile{
-}*/
 
 .chiffre {
-    left: 25px;
-    position: absolute;
+
+    position:absolute;
+    
+    margin-right: auto;
+    left:22px;
     color: var(--white-color);
+    
 }
 
 .ellipse {
+    left:0;
     position: absolute;
-    left: 18px;
+    margin-right: auto;
+    left:15px;
+    
+    
 }
 
 
@@ -236,19 +243,28 @@ header {
     margin-bottom: 20px;
 }
 
-.card-restaurants {
+.cards-restaurants {
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
 }
 
-.card-resto {
-    object-fit: cover;
-    height: 251px;
+.resto-link {
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    margin-bottom: 20px;
+}
+
+.card-resto {
+
+    object-fit: cover;
+    /*height: 251px;*/
+    /*border-radius: 15px;*/
+    /*overflow: hidden;*/
+    /*box-shadow: var(--box-shadow);*/
+    
 }
 
 .img-resto {
@@ -258,19 +274,15 @@ header {
 }
 
 .nom-resto {
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-left: 10px;
+
+    /*margin-top: 10px;
+    margin-left: 10px;*/
     margin-bottom: 5px;
 }
 
 .location-resto {
-    font-weight: 300;
-    font-size: 17px;
-    margin-left: 10px;
-    margin-top: 0px;
-    margin-bottom: 20px;
+
+
 }
 
 .desc-resto {
@@ -278,6 +290,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    
+    
 }
 
 .icon-resto {
@@ -303,10 +318,52 @@ header {
     margin-left: 10px;
 }
 
-/*.icon-footer{
-    height:15px;
-    width: 15px;
 
-}*/
+@media screen and (min-width: 768px) {
+    .btns-fonctionnement{
+        flex-direction: row;
+        gap: 20px;
+    }
 
-@media screen and (min-width: 768px) {}
+    .btn-content{
+        position: relative;
+    }
+
+    .ellipse{
+        position: absolute;
+        left: -10px;
+        top: 34%;
+    }
+
+    .chiffre {
+        position: absolute;
+        left: -3px;
+    }
+
+    .cards-restaurants {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .resto-link{
+        width: 22.5%;
+        
+    }
+
+    .card-resto {
+        width: 100%;
+    }
+    
+    .footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer :nth-child(1){
+        order: 5;
+    }
+
+}
