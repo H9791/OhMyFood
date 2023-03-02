@@ -319,12 +319,17 @@ header {
 /*ALL FLEXBOX ITEMS THE SAME PADDING*/
 .footer>* {
     padding-top: 10px;
-
+    
 }
+
+#contact {color: white;}
 
 .ml-10 {
     margin-left: 10px;
+
 }
+
+
 
 
 @media screen and (min-width: 768px) {
