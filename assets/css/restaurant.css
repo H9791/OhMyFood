@@ -11,8 +11,16 @@ h1, h2 {
     margin: 0;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 html {
     min-width: 320px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -32,7 +40,6 @@ body {
     align-items: center;
     position: absolute;
     left:10%;
-    /*background-color: yellow;*/
     height:50px;
     width:50px;
     border-radius: 25px;
@@ -59,7 +66,8 @@ body {
 }
 
 .img-menu {
-    /*z-index: 1;*/
+   /*new*/
+  /* align-self: stretch;*/
 }
 
 .img-resto {
@@ -71,6 +79,7 @@ body {
 .menu {
     display: flex;
     flex-direction: column;
+   
     width: 100%;
 }
 
@@ -119,21 +128,38 @@ body {
 }
 
 
+#heart {
+    width: 22px;
+    height: 21px;
+    stroke: #000000;
+    fill: url(#MyGradient);
+    fill-opacity: 0;
+    animation-name: colorchange;
+    transition-property: fill-opacity;
+    transition-duration: 1000ms;
+
+}
+
+#heart:hover {
+    fill-opacity: 1;
+    cursor: pointer;
+}
+
+
 
 .repas a{
     display: none;
 }
 .repas:hover a {
     display: initial;
-
+    animation: repas-check 500ms;
 }
-/*
-.h2-sousligne {
-    text-decoration-line: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: green;
-    text-decoration-thickness: 3px;
-}*/
+
+
+@keyframes repas-check {
+    0% { transform: translateX(40px);}    
+    100% {transform: translateX(0);}
+}
 
 .h2-course {
     margin-top: 20px;
@@ -146,14 +172,28 @@ body {
     margin-bottom: 20px;
 }
 
+.center-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.resto-entier{
+    width: 100%;
+}
+
 .course {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    box-sizing: border-box;
+    width:100%;
     background-color: #f7f7f7;
     margin-top: -50px;
     padding: 20px;
     border-radius: 40px 40px 0 0;
 }
+
+
 
 .trois-repas {
     display: flex;
@@ -162,6 +202,25 @@ body {
     margin-bottom:20px;
     gap: 20px;
 }
+
+@keyframes repas-in {
+    0% {transform: translateX(-900px);}
+    100% {transform: translateX(0); } 
+}
+
+#entrees{
+    animation: repas-in 2s 300ms forwards;
+}
+
+#plats{
+    animation: repas-in 2s 600ms forwards;
+}
+
+#desserts{
+    animation: repas-in 2s 900ms forwards;
+}
+
+
 
 .ok-check {
     display: flex;
@@ -183,8 +242,13 @@ body {
     height: 69px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     /*border: 1px solid black;*/
+}
+
+.repas:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
 }
 
 
@@ -194,7 +258,6 @@ body {
     justify-content: space-between;
     /*background-color: white;*/
     width: 100%;
-
     border-radius: 15px;
 }
 
@@ -222,15 +285,7 @@ body {
     padding: 10px;
 }
 
-/* .desc-prix {
-    display: flex;
-    justify-content: space-between;  
-} */
 
-/*
-.c {
-    flex-shrink: 0;
-}*/
 
 .footer {
     padding: 20px;
@@ -240,6 +295,11 @@ body {
     background-color: var(--grey-color);
 }
 
+
+#contact {
+    color: white;
+}
+
 .ml-10{
     margin-left: 10px;
 }
@@ -247,5 +307,48 @@ body {
 /*ALL FLEXBOX ITEMS THE SAME PADDING*/
 .footer>*{
     padding-top:10px;
-    
+}
+
+/* animations repas*/
+
+@media screen and (min-width: 768px){
+
+    .course{
+        width: 100%;
+        max-width: 1100px;
+        
+    }
+
+    .resto-entier{
+        width:720px;
+        background-color: #f7f7f7;
+        align-self: center;
+        /*border: 1px solid red;*/
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: right;
+        padding-right: 15%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer :nth-child(1) {
+        order: 5;
+    }
+
+    .menu-header{
+        justify-content: center;
+    }
+    .center-page{
+        /*display: flex;
+        min-width: 100%;
+        max-width: 1440px;*/
+/*    width: 100%;
+        display: flex;
+        justify-content: center; */
+        
+    }
+
 }
