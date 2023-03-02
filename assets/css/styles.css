@@ -33,9 +33,9 @@ h3 {
 body {
     margin-left: auto;
     margin-right: auto;
-    width: 100%px;
+    width: 100%;
     min-width: 320px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     font-family: 'Roboto', sans-serif;
 }
 
@@ -53,7 +53,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    margin:0;
+    margin: 0;
 }
 
 
@@ -63,7 +63,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
-    margin:0;
+    margin: 0;
 }
 
 .roboto-300-17 {
@@ -72,7 +72,7 @@ body {
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
-    margin:0;
+    margin: 0;
 }
 
 .roboto-500-16 {
@@ -202,19 +202,19 @@ header {
     font-size: 16px;
 }
 
-.btn-content:hover{
+.btn-content:hover {
     background-color: var(--primary2-color);
 }
 
-.btn-content:hover .mobile{
-    filter:  invert(46%) sepia(36%) saturate(7077%) hue-rotate(244deg) brightness(92%) contrast(86%);    
+.btn-content:hover .mobile {
+    filter: invert(46%) sepia(36%) saturate(7077%) hue-rotate(244deg) brightness(92%) contrast(86%);
 }
 
 
 
 .mob-text {
     display: flex;
-    width:215px;
+    width: 215px;
     gap: 15px;
     padding-left: 20px;
     padding-right: 10px;
@@ -223,17 +223,17 @@ header {
 
 
 .chiffre {
-    position:absolute;
+    position: absolute;
     margin-right: auto;
-    left:22px;
+    left: 22px;
     color: var(--white-color);
 }
 
 .ellipse {
-    left:0;
+    left: 0;
     position: absolute;
     margin-right: auto;
-    left:15px;    
+    left: 15px;
 }
 
 
@@ -269,7 +269,7 @@ header {
     /*border-radius: 15px;*/
     /*overflow: hidden;*/
     /*box-shadow: var(--box-shadow);*/
-    
+
 }
 
 .img-resto {
@@ -285,10 +285,7 @@ header {
     margin-bottom: 5px;
 }
 
-.location-resto {
-
-
-}
+.location-resto {}
 
 .desc-resto {
     display: flex;
@@ -296,16 +293,16 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
-    
-    
-    
+
+
+
 }
 
 .icon-resto {
     width: 13%;
-    
-    
-    
+
+
+
 }
 
 .footer {
@@ -319,10 +316,12 @@ header {
 /*ALL FLEXBOX ITEMS THE SAME PADDING*/
 .footer>* {
     padding-top: 10px;
-    
+
 }
 
-#contact {color: white;}
+#contact {
+    color: white;
+}
 
 .ml-10 {
     margin-left: 10px;
@@ -333,16 +332,16 @@ header {
 
 
 @media screen and (min-width: 768px) {
-    .btns-fonctionnement{
+    .btns-fonctionnement {
         flex-direction: row;
         gap: 20px;
     }
 
-    .btn-content{
+    .btn-content {
         position: relative;
     }
 
-    .ellipse{
+    .ellipse {
         position: absolute;
         left: -10px;
         top: 34%;
@@ -356,18 +355,18 @@ header {
     .cards-restaurants {
         flex-direction: row;
         justify-content: space-between;
-        
+
     }
 
-    .resto-link{
+    .resto-link {
         width: 22.5%;
-        
+
     }
 
     .card-resto {
         width: 100%;
     }
-    
+
     .footer {
         flex-direction: row;
         justify-content: center;
@@ -375,19 +374,19 @@ header {
         gap: 20px;
     }
 
-    .footer :nth-child(1){
+    .footer :nth-child(1) {
         order: 5;
     }
 
 }
 
-       
+
 #heart {
     width: 22px;
     height: 21px;
     stroke: #000000;
     fill: url(#MyGradient);
-    fill-opacity:0;
+    fill-opacity: 0;
     animation-name: colorchange;
     transition-property: fill-opacity;
     transition-duration: 1000ms;
@@ -395,7 +394,64 @@ header {
 }
 
 #heart:hover {
-    fill-opacity:1;
+    fill-opacity: 1;
 }
 
+/******************************/
+#loader-icon-div {
+    height:200px;
+    width:200px;
+    display: inherit;
+    background-color: grey;
+    border-radius: 20px;
+    z-index: 1000;
+}
 
+#loader-icon1 {
+    animation-name: up;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes up {
+    0% {transform: translateY(0%);}
+    20%{transform: translateY(-7%);}
+    40%{transform: translateY(0%);}
+    60%{transform: translateY(-7%)}
+    80% {transform: translateY(0%);}
+    99% {transform: translateY(-7%);}
+    100% {transform: scale(0%) }
+}
+
+.load{
+    height: 0px;
+    width: 0px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid black;*/
+    animation-name: loadhide;
+    animation-duration: 2s;
+    animation-play-state: running;
+}
+
+@keyframes loadhide{
+    0% {width:100%; height: 100%}
+    99% {width:100%; height: 100%}
+    100% {width:0%; height: 0%}
+}
+
+.cover {
+    /*display: inherit;*/
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 1000;
+}
