@@ -39,6 +39,7 @@ body {
     margin-right: auto;
     width: 100%;
     min-width: 320px;
+    
     /*border: 1px solid black;*/
     font-family: 'Roboto', sans-serif;
 }
@@ -316,11 +317,17 @@ header {
 }
 
 .footer {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     color: white;
     background-color: var(--grey-color);
+}
+
+.img-footer{
+    width: 162px;
+    height: 30px;
+    position: initial;
 }
 
 /*ALL FLEXBOX ITEMS THE SAME PADDING*/
@@ -379,8 +386,10 @@ header {
 
     .footer {
         flex-direction: row;
-        justify-content: center;
-        align-items: right;
+        /*justify-content: center;
+        align-items: right;*/
+        justify-content: right;
+        align-items: center;
         padding-right: 15%;
         gap: 20px;
     }

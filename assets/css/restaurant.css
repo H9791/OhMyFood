@@ -25,6 +25,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
 }
 
 .header {
@@ -32,17 +33,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 /**************************************/
 #header-arrow-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left:10%;
+    /*position: absolute;*/
+    /*left:10%;*/
+    margin-right: 300px;
     height:50px;
     width:50px;
     border-radius: 25px;
+
 }
 
 #header-arrow-container:hover{
@@ -63,6 +67,7 @@ body {
 .img-header {
     width: 162px;
     height: 30px;
+    position: absolute;
 }
 
 .img-menu {
@@ -288,13 +293,18 @@ body {
 
 
 .footer {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     color: white;
     background-color: var(--grey-color);
 }
 
+.img-footer{
+    width: 162px;
+    height: 30px;
+    position: initial;
+}
 
 #contact {
     color: white;
