@@ -385,14 +385,13 @@ header {
     }
 
     .footer {
-        flex-direction: row;
-        /*justify-content: center;
-        align-items: right;*/
-        justify-content: right;
-        align-items: center;
-        padding-right: 15%;
-        gap: 20px;
-    }
+      
+            flex-direction: row;
+            justify-content: center;
+            /*padding-right: 15%;*/
+            align-items: center;
+            gap: 20px;
+            }
 
     .footer :nth-child(1) {
         order: 5;

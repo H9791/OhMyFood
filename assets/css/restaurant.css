@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 /**************************************/
 #header-arrow-container{
@@ -338,8 +338,8 @@ body {
 
     .footer {
         flex-direction: row;
-        justify-content: right;
-        padding-right: 15%;
+        justify-content: center;
+        /*padding-right: 15%;*/
         align-items: center;
         gap: 20px;
     }
