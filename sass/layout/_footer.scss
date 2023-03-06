@@ -1,0 +1,74 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+padding: 20px;
+    & div {
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+
+    & .ml-10{
+        margin-left: 10px;
+    }
+
+    & img{
+    
+    }
+
+    & #contact {
+        color: white;
+    }
+} 
+
+.footer-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+}
+
+/* 
+.shape{
+    margin-top:200px;
+    margin-left: 200px;
+    width:200px;
+    height:200px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
+    box-sizing: border-box;
+    z-index:5;
+    
+}
+
+.shape::before{
+    content: "";
+    height: 200px;
+    width: 200px;
+    background-color:orange;
+    position: absolute;
+    border-radius: 50%;
+    top: -100px;
+    left:0px;
+    border-top: 10px solid black;
+    border-left: 10px solid black;
+    box-sizing: content-box;
+    z-index: -5;
+}
+
+.shape::after{
+    content: "";
+    height: 200px;
+    width: 200px;
+    background-color: yellow;;
+    position: absolute;
+    border-radius: 100%;
+    left: 100px;
+    top:0px;
+    border-right: 10px solid black;
+    z-index: -5;
+}
+ */
+

@@ -1,0 +1,176 @@
+
+.place {
+    text-align: center;
+    padding: 10px;
+    background-color: $background2-color;
+    
+    &__text{
+        @include roboto-500-16;
+        text-align: center;
+        line-height: 30px;
+        height:30px;
+        
+        &::before{
+            content:'';
+            background: url(../assets/icons/Pin.svg) no-repeat center;
+            display: inline-block;
+            width: 20px;
+            height:20px;
+            vertical-align: sub;
+        }
+    }
+}
+
+.intro{
+    background-color: $background-color;
+    text-align: center;
+    padding:20px;
+    background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    & h2{
+        @include roboto-700-24;
+        padding: 10px;
+    }
+    & h3{
+        @include roboto-300_18;
+        padding: 10px;
+        margin-bottom:10px;
+        
+    }
+    & button{
+        @include roboto-500_16;
+        padding: 10px;
+        border-radius: 25px;
+        border: none;
+        margin-bottom: 20px;
+        background: $btn-gradient;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+        &:hover{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.functioning {
+    position: relative;
+    & h2{
+        @include roboto-700-24;
+        margin: 20px;
+    }
+
+    & .three-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.restaurants {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px 20px 20px 20px;;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    
+
+    & h2{
+        margin-top: 10px;
+        margin-bottom:30px;
+        @include roboto-700-24;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        
+        /*&:hover{
+
+        }*/
+
+        & img {
+            height:200px;
+            object-fit: cover;
+            top: 50px;
+        }
+
+        &__description{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .heart-icon {
+                width: 20px;
+                height: 20px;
+                position: relative;
+                right: 20px; 
+                background: url("../assets/icons/h1.svg") center no-repeat;
+               &:hover{
+                    animation-direction: forwards;
+                    animation-name: fill-in;
+                    animation-fill-mode: both;
+                    animation-duration: 2000ms;
+                    animation-timing-function: linear;
+                    background: url("../assets/icons/h2.svg") center no-repeat;
+                }
+
+                @keyframes fill-in {
+                    50% {transform: scale(0.5)}
+                    100% {transform: scale(1)}
+                }
+            }
+        }
+
+        & .restaurant-name{
+            
+            & h3{
+                padding: 15px 15px 2px 15px;
+                @include roboto-700-18;
+            }
+
+            & p{
+                padding: 2px 15px 15px 15px;
+                @include roboto-300-17;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+    .restaurants{
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding-top: 70px;
+        gap: 10px;
+        &__card{
+            width:22%;
+        }
+
+        & h2{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }        
+    }
+
+    .footer {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        & :nth-child(1) {
+            order: 5;
+        }
+    }  
+}
+

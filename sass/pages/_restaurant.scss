@@ -1,0 +1,254 @@
+.header {
+    min-width: 320px;
+    margin: 10px;
+
+    &__text {
+        display: block;
+        text-align: center;
+        font-family: 'Shrikhand', cursive;
+        font-size: 2rem;
+    }
+}
+
+
+.header-resto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    &__arrow-container {
+        margin-left: 40px;
+        margin-right: 300px;
+        border-radius: 25px;
+        padding: 10px;
+
+        &:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__arrow {
+        width: 20px;
+    }
+
+    & .header__text {
+        position: absolute;
+    }
+}
+
+.img-resto {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.main-restaurant {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.restaurant {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1100px;
+    background-color: $background-color;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+
+    &__header{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 50px;
+    } 
+
+    & h2 {
+        margin-top: 30px;
+        text-align: center;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    & .menus {
+        margin: auto;
+        max-width: 700px;
+        background-color: $background-color;
+
+        & .underlined{
+            margin-top: 10px;
+            margin-left: 20px;
+            width:40px;
+            border-bottom: 5px solid $green-color;
+        }
+
+        & h3 {
+            margin-left: 20px;
+            margin-top: 40px;
+            @include roboto-300-16;
+        }
+    }
+
+    & .course {
+        max-width: 100%;
+        transform: translateX(-900px);
+        
+    }
+
+    & .dish {
+        display: flex;
+        align-items: flex-end;
+        
+        margin: 20px;
+        max-width: 100%;
+        height: 70px;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.2);
+
+        &:hover{
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);            
+        }
+        
+        &:hover .dish-price {
+            animation: check-in 500ms;
+        }
+
+        &:hover .dish-check {
+            animation: check-in 500ms;
+        }
+
+        &:hover .dish-name {
+            width: calc(100% - 120px);
+        }
+
+        & .dish-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 15px;
+            width: 100%;
+            height: 100%;
+            
+
+            & h4 {
+                @include roboto-500-18;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            & p {
+
+                @include roboto-400-16;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+            }
+        }
+
+        & .dish-price {
+            width: 60px;
+            height: 30%;
+            text-align: center;
+            @include roboto-700-18;
+            box-sizing: content-box;
+            padding-bottom: 10px;
+
+            background-color: yellow;
+        }
+
+        & .dish-check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -60px;
+            height: 100%;
+            width: 60px;
+            background-color: $green-color;
+
+        }
+
+    }
+
+}
+
+
+.one {
+    animation: menus-in 2000ms 300ms forwards;
+}
+
+.two {
+    animation: menus-in 2000ms 600ms forwards;
+}
+
+.three{
+    animation: menus-in 2000ms 900ms forwards;
+}
+
+@keyframes menus-in {
+    from {
+        transform: translateX(-900px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes check-in {
+    0% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/*.hh{
+    
+    width: 200px;
+    height: 200px;
+    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
+
+}
+
+.hh img {
+    opacity:0; 
+}
+
+.hh:hover img{
+    
+    transition: opacity 2000ms;
+
+    opacity: 1;
+}*/
+
+/*
+.hh{  
+    width: 200px;
+    height: 200px;
+    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
+}
+
+.hh img {
+    opacity:0; 
+    transition: opacity 1000ms;
+}
+
+.hh:hover img{
+    opacity: 1;
+}*/

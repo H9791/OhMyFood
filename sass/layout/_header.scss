@@ -1,0 +1,10 @@
+.header{
+    min-width: 320px;
+    margin: 10px;
+    &__text {
+        display: block;
+        text-align: center;
+        font-family: 'Shrikhand', cursive;
+        font-size: 2rem;
+    }
+}

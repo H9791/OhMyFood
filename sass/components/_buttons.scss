@@ -1,0 +1,47 @@
+.function-button{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    background-color: $background-color;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    @include roboto-500-16;
+
+    &:hover{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        background-color: $button-hover-color;
+        
+        i {
+            color: $primary-color;
+        }
+    }
+
+    &__number{
+        position: absolute;
+        height:1.5rem;
+        width: 1.5rem;
+        padding-top:2px;
+        left: 10px;
+        color: white;
+        background-color: $primary-color;
+        border-radius: 999px;
+    }
+
+    & i {
+        position: relative;
+        right: 20px;
+        width: 15px;
+    }
+
+    &__text{
+        width: 175px;
+        text-align: start;
+    }
+
+
+}

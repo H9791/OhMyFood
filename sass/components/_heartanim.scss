@@ -1,0 +1,15 @@
+.heart{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
+
+    & img{
+        opacity: 0;
+        transition: opacity 1000ms;
+    }
+
+    &:hover img{
+        opacity: 1;
+    }
+}
