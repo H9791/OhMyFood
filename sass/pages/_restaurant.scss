@@ -94,7 +94,8 @@
         }
 
         &:hover .dish-name {
-            width: calc(100% - 120px);
+            width: calc(100% - 140px);
+            
         }
 
         & .dish-name {
@@ -102,7 +103,8 @@
             flex-direction: column;
             justify-content: space-evenly;
             padding: 15px;
-            width: 100%;
+            
+            width: calc(100% - 70px);
             height: 100%;
             
 
@@ -130,8 +132,8 @@
             @include roboto-700-18;
             box-sizing: content-box;
             padding-bottom: 10px;
-
-            background-color: yellow;
+            padding-right:20px;
+            
         }
 
         & .dish-check {

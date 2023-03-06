@@ -28,6 +28,13 @@
     line-height: 19px;
 }
 
+@mixin roboto-500-14 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
 @mixin roboto-500-18 {
     font-weight: 500;
     font-size: 18px;

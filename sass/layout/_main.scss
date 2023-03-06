@@ -53,6 +53,7 @@
     }
 
     &__card{
+        position: relative;
         display: flex;
         flex-direction: column;
         border-radius: 25px;
@@ -60,11 +61,23 @@
         margin-bottom: 10px;
         overflow: hidden;
         background-color: white;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
         
-        /*&:hover{
+        &.new::before{
+            position: absolute;
+            content: 'Nouveau';
+            background-color: lightgreen;
+            padding:5px;
+            right:15px;
+            top: 15px;
+            background-color: $green-color;
+            @include roboto-500-14;
+        }
+        
 
-        }*/
+        &:hover{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
         &__img {
             height:200px;
@@ -75,13 +88,14 @@
         &__description{
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            padding:15px;
 
             & .heart-icon {
                 width: 20px;
                 height: 20px;
                 position: relative;
-                right: 20px; 
+                
                 background: url("../assets/icons/h1.svg") center no-repeat;
                &:hover{
                     animation-direction: forwards;
@@ -102,18 +116,24 @@
         & .restaurant-name{
             
             & h3{
-                padding: 15px 15px 2px 15px;
                 @include roboto-700-18;
             }
 
             & p{
-                padding: 2px 15px 15px 15px;
                 @include roboto-300-17;
             }
         }
     }
 }
 
+/*
+.new::before{
+    position: absolute;
+    content: 'Nouveau';
+    background-color: lightgreen;
+    padding:5px;
+
+}*/
 
 
 @media screen and (min-width: 768px){

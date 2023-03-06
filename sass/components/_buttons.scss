@@ -26,10 +26,11 @@
         height:1.5rem;
         width: 1.5rem;
         padding-top:2px;
+        align-self: center;
         left: 10px;
         color: white;
         background-color: $primary-color;
-        border-radius: 999px;
+        border-radius: 100px;
     }
 
     & i {

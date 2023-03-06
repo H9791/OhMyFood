@@ -87,10 +87,11 @@ input {
   height: 1.5rem;
   width: 1.5rem;
   padding-top: 2px;
+  align-self: center;
   left: 10px;
   color: white;
   background-color: #9356DC;
-  border-radius: 999px;
+  border-radius: 100px;
 }
 .function-button i {
   position: relative;
@@ -155,7 +156,6 @@ input {
 .heart {
   height: 25px;
   width: 25px;
-  margin-right: 20px;
   background: url("../assets/icons/Heart-regular.svg") no-repeat center;
 }
 .heart__img {
@@ -209,7 +209,7 @@ input {
 }
 .header {
   min-width: 320px;
-  margin: 30px;
+  margin: 15px;
 }
 .header__text {
   display: block;
@@ -360,6 +360,7 @@ input {
   line-height: 28px;
 }
 .restaurants__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -367,10 +368,22 @@ input {
   margin-bottom: 10px;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  /*&:hover{
-
-  }*/
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.restaurants__card.new::before {
+  position: absolute;
+  content: "Nouveau";
+  background-color: lightgreen;
+  padding: 5px;
+  right: 15px;
+  top: 15px;
+  background-color: #99E2D0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.restaurants__card:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .restaurants__card__img {
   height: 200px;
@@ -380,13 +393,13 @@ input {
 .restaurants__card__description {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 15px;
 }
 .restaurants__card__description .heart-icon {
   width: 20px;
   height: 20px;
   position: relative;
-  right: 20px;
   background: url("../assets/icons/h1.svg") center no-repeat;
 }
 .restaurants__card__description .heart-icon:hover {
@@ -406,18 +419,24 @@ input {
   }
 }
 .restaurants__card .restaurant-name h3 {
-  padding: 15px 15px 2px 15px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
 }
 .restaurants__card .restaurant-name p {
-  padding: 2px 15px 15px 15px;
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
 }
 
+/*
+.new::before{
+    position: absolute;
+    content: 'Nouveau';
+    background-color: lightgreen;
+    padding:5px;
+
+}*/
 @media screen and (min-width: 768px) {
   .functioning .three-buttons {
     flex-direction: row;
@@ -531,14 +550,14 @@ input {
   animation: check-in 500ms;
 }
 .restaurant .dish:hover .dish-name {
-  width: calc(100% - 120px);
+  width: calc(100% - 140px);
 }
 .restaurant .dish .dish-name {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 15px;
-  width: 100%;
+  width: calc(100% - 70px);
   height: 100%;
 }
 .restaurant .dish .dish-name h4 {
@@ -566,7 +585,7 @@ input {
   line-height: 21px;
   box-sizing: content-box;
   padding-bottom: 10px;
-  background-color: yellow;
+  padding-right: 20px;
 }
 .restaurant .dish .dish-check {
   display: flex;
