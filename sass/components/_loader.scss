@@ -1,25 +1,22 @@
 .loader {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    max-width: 1440px;
     height: 100%;
-    background-color: rgba(255,255,255,0.5);  
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 50;
     animation: load 200ms 2500ms both;
 
-    &__loading {
-        left: 50%;
-        top: 40%;
-        opacity:1;
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-        position: relative;
-        background: $btn-gradient;
-        box-sizing: border-box;
-        animation: flipX 1s linear 3;
-        z-index: 1000;
-        
-    }
+        &__loading {
+            opacity: 1;
+            width: 100px;
+            height: 100px;
+            background: $btn-gradient;
+            animation: flipX 1s linear 3;
+        }
 }
 
 @keyframes flipX {
@@ -40,6 +37,6 @@
 @keyframes load {
     100% {
         z-index: -50;
-        opacity:0;
+        opacity: 0;
     }
 }
