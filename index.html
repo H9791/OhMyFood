@@ -16,11 +16,18 @@
 </head>
 
 <body>
+
+    <div class="loader">
+        
+            <div class="loader__loading"></div>
+       
+    </div>
+
     <header class="header">
         <a class="header__text" href="./index.html">ohmyfood</a>
     </header>
 
-    <main class="main-index">  
+    <main class="main-index">
 
         <section class="place">
             <h3 class="place__text">Paris, Belleville</h3>
@@ -40,13 +47,13 @@
                     <i class="fa-solid fa-mobile-screen"></i>
                     <span class="function-button__text">Choisissez un restaurant</span>
                 </button>
-                
+
                 <button class="function-button">
                     <span class="function-button__number">2</span>
                     <i class="fa-solid fa-list"></i>
                     <span class="function-button__text">Composez votre menu</span>
                 </button>
-                
+
                 <button class="function-button">
                     <span class="function-button__number">3</span>
                     <i class="fa-solid fa-store"></i>
@@ -57,48 +64,58 @@
 
         <section class="restaurants">
             <h2>Restaurants</h2>
-            
+
             <a href="./palette.html" class="restaurants__card">
-                <img src="./assets/images/1.jpg">
-                <div class="restaurants__card__description" >
+                <img class="restaurants__card__img" src="./assets/images/1.jpg">
+                <div class="restaurants__card__description">
                     <div class="restaurant-name">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <div class="heart-icon"></div>
+
+                    <div class="heart">
+                        <img class="heart__img" src="../assets/icons/Heart-gradient.svg">
+                    </div>
+                    <!-- <div class="heart-icon"></div> -->
                 </div>
             </a>
 
             <a href="#" class="restaurants__card">
-                <img src="./assets/images/2.jpg">
-                <div class="restaurants__card__description" >
+                <img class="restaurants__card__img" src="./assets/images/2.jpg">
+                <div class="restaurants__card__description">
                     <div class="restaurant-name">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <div class="heart-icon"></div>
+                    <div class="heart">
+                        <img class="heart__img" src="../assets/icons/Heart-gradient.svg">
+                    </div>
                 </div>
             </a>
 
             <a href="#" class="restaurants__card">
-                <img src="./assets/images/3.jpg">
-                <div class="restaurants__card__description" >
+                <img class="restaurants__card__img" src="./assets/images/3.jpg">
+                <div class="restaurants__card__description">
                     <div class="restaurant-name">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <div class="heart-icon"></div>
+                    <div class="heart">
+                        <img class="heart__img" src="../assets/icons/Heart-gradient.svg">
+                    </div>
                 </div>
             </a>
 
             <a href="#" class="restaurants__card">
-                <img src="./assets/images/4.jpg">
-                <div class="restaurants__card__description" >
+                <img class="restaurants__card__img" src="./assets/images/4.jpg">
+                <div class="restaurants__card__description">
                     <div class="restaurant-name">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <div class="heart-icon"></div>
+                    <div class="heart">
+                        <img class="heart__img" src="../assets/icons/Heart-gradient.svg">
+                    </div>
                 </div>
             </a>
 
@@ -114,17 +131,17 @@
                 <img src="../assets/icons/Ustensiles.svg">
                 <span class="ml-10">Proposer un restaurant</span>
             </div>
-    
+
             <div>
                 <img src="../assets/icons/Poignee.svg">
                 <span class="ml-10">Devenir partenaire</span>
             </div>
             <div>Mentions légales</div>
             <div><a id="contact" href="mailto:email@example.com">Contact</a></div>
-    
+
         </footer>
 
-        
+
 
 
 

@@ -1,10 +1,37 @@
 .header{
     min-width: 320px;
-    margin: 10px;
+    margin: 30px;
     &__text {
         display: block;
         text-align: center;
         font-family: 'Shrikhand', cursive;
         font-size: 2rem;
+    }
+}
+
+.header-resto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &__arrow-container {
+        margin-left: 40px;
+        margin-right: 300px;
+        border-radius: 25px;
+        padding: 10px;
+
+        &:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__arrow {
+        width: 20px;
+    }
+
+    & .header__text {
+        position: absolute;
     }
 }

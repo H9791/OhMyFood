@@ -1,0 +1,45 @@
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);  
+    z-index: 50;
+    animation: load 200ms 2500ms both;
+
+    &__loading {
+        left: 50%;
+        top: 40%;
+        opacity:1;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        position: relative;
+        background: $btn-gradient;
+        box-sizing: border-box;
+        animation: flipX 1s linear 3;
+        z-index: 1000;
+        
+    }
+}
+
+@keyframes flipX {
+    0% {
+        transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+
+    }
+}
+
+@keyframes load {
+    100% {
+        z-index: -50;
+        opacity:0;
+    }
+}

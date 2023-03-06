@@ -66,8 +66,8 @@ input {
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   border: none;
   background-color: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -94,7 +94,7 @@ input {
 }
 .function-button i {
   position: relative;
-  right: 20px;
+  right: 15px;
   width: 15px;
 }
 .function-button__text {
@@ -141,29 +141,104 @@ input {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 768px) {
+  .function-button {
+    width: 30%;
+    position: relative;
+    padding-left: 30px;
+  }
+  .function-button__number {
+    position: absolute;
+    left: -10px;
+  }
+}
 .heart {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
   background: url("../assets/icons/Heart-regular.svg") no-repeat center;
 }
-.heart img {
+.heart__img {
+  width: 25px;
+  height: 25px;
   opacity: 0;
   transition: opacity 1000ms;
 }
-.heart:hover img {
+.heart__img:hover {
   opacity: 1;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 50;
+  animation: load 200ms 2500ms both;
+}
+.loader__loading {
+  left: 50%;
+  top: 40%;
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-sizing: border-box;
+  animation: flipX 1s linear 3;
+  z-index: 1000;
+}
+
+@keyframes flipX {
+  0% {
+    transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@keyframes load {
+  100% {
+    z-index: -50;
+    opacity: 0;
+  }
+}
 .header {
   min-width: 320px;
-  margin: 10px;
+  margin: 30px;
 }
 .header__text {
   display: block;
   text-align: center;
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
+}
+
+.header-resto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.header-resto__arrow-container {
+  margin-left: 40px;
+  margin-right: 300px;
+  border-radius: 25px;
+  padding: 10px;
+}
+.header-resto__arrow-container:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.header-resto__arrow {
+  width: 20px;
+}
+.header-resto .header__text {
+  position: absolute;
 }
 
 .footer {
@@ -297,7 +372,7 @@ input {
 
   }*/
 }
-.restaurants__card img {
+.restaurants__card__img {
   height: 200px;
   object-fit: cover;
   top: 50px;
@@ -344,6 +419,10 @@ input {
 }
 
 @media screen and (min-width: 768px) {
+  .functioning .three-buttons {
+    flex-direction: row;
+    /*justify-content: space-evenly;*/
+  }
   .restaurants {
     flex-direction: row;
     justify-content: space-between;
@@ -369,39 +448,6 @@ input {
     order: 5;
   }
 }
-.header {
-  min-width: 320px;
-  margin: 10px;
-}
-.header__text {
-  display: block;
-  text-align: center;
-  font-family: "Shrikhand", cursive;
-  font-size: 2rem;
-}
-
-.header-resto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-.header-resto__arrow-container {
-  margin-left: 40px;
-  margin-right: 300px;
-  border-radius: 25px;
-  padding: 10px;
-}
-.header-resto__arrow-container:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.header-resto__arrow {
-  width: 20px;
-}
-.header-resto .header__text {
-  position: absolute;
-}
-
 .img-resto {
   width: 100%;
   height: 300px;
