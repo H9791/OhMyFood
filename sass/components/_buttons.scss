@@ -45,3 +45,40 @@
 
 
 }
+
+.btn-gradient{
+    background-color: $background-color;
+    text-align: center;
+    padding:20px;
+    background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    & h2{
+        @include roboto-700-24;
+        padding: 10px;
+    }
+    & h3{
+        @include roboto-300_18;
+        padding: 10px;
+        margin-bottom:10px;
+        
+    }
+
+    & #commander{
+        padding-left:40px;
+        padding-right: 40px;
+    }
+
+    & button{
+        @include roboto-500_16;
+        padding: 10px;
+        border-radius: 25px;
+        border: none;
+        margin-bottom: 20px;
+        background: $btn-gradient;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+        &:hover{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

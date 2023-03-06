@@ -64,10 +64,14 @@
     margin-top: -60px;
 
     &__header{
+        margin: auto;
+        max-width:700px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-end;
         gap: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     } 
 
     & h2 {
@@ -196,6 +200,9 @@
     animation: menus-in 2000ms 900ms forwards;
 }
 
+
+
+
 @keyframes menus-in {
     from {
         transform: translateX(-900px);
@@ -216,26 +223,13 @@
     }
 }
 
-
-
-/*.hh{
-    
-    width: 200px;
-    height: 200px;
-    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
-
+@media screen and (min-width: 768px){
+    .restaurant {
+        &__header{
+            justify-content: center;
+        } 
 }
-
-.hh img {
-    opacity:0; 
 }
-
-.hh:hover img{
-    
-    transition: opacity 2000ms;
-
-    opacity: 1;
-}*/
 
 /*
 .hh{  

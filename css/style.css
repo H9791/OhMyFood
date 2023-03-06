@@ -102,6 +102,45 @@ input {
   text-align: start;
 }
 
+.btn-gradient {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+  background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+.btn-gradient h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 10px;
+}
+.btn-gradient h3 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.btn-gradient #commander {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.btn-gradient button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 20px;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn-gradient button:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .heart {
   display: inline-block;
   height: 30px;
@@ -214,41 +253,6 @@ input {
   width: 20px;
   height: 20px;
   vertical-align: sub;
-}
-
-.intro {
-  background-color: #f7f7f7;
-  text-align: center;
-  padding: 20px;
-  background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-}
-.intro h2 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  padding: 10px;
-}
-.intro h3 {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-.intro button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 10px;
-  border-radius: 25px;
-  border: none;
-  margin-bottom: 20px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.intro button:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .functioning {
@@ -422,10 +426,14 @@ input {
   margin-top: -60px;
 }
 .restaurant__header {
+  margin: auto;
+  max-width: 700px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
   gap: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .restaurant h2 {
   margin-top: 30px;
@@ -552,24 +560,11 @@ input {
     transform: translateX(0);
   }
 }
-/*.hh{
-
-    width: 200px;
-    height: 200px;
-    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
-
+@media screen and (min-width: 768px) {
+  .restaurant__header {
+    justify-content: center;
+  }
 }
-
-.hh img {
-    opacity:0; 
-}
-
-.hh:hover img{
-
-    transition: opacity 2000ms;
-
-    opacity: 1;
-}*/
 /*
 .hh{  
     width: 200px;
