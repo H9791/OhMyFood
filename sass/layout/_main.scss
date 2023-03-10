@@ -126,20 +126,9 @@
     }
 }
 
-/*
-.new::before{
-    position: absolute;
-    content: 'Nouveau';
-    background-color: lightgreen;
-    padding:5px;
-
-}*/
-
 
 @media screen and (min-width: 768px){
-    
-
-
+  
     .functioning {
         & .three-buttons{
             flex-direction: row;
@@ -147,8 +136,6 @@
         }
     }
 
-    
-    
     
     .restaurants{
         flex-direction: row;

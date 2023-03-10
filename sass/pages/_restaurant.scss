@@ -1,4 +1,3 @@
-
 .img-resto {
     width: 100%;
     height: 300px;
@@ -9,11 +8,8 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-
     width: 100%;
     height: 100%;
-    
-
 }
 
 .restaurant {
@@ -25,16 +21,16 @@
     border-radius: 40px 40px 0 0;
     margin-top: -60px;
 
-    &__header{
+    &__header {
         margin: auto;
-        max-width:700px;
+        max-width: 700px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         gap: 50px;
         padding-left: 20px;
         padding-right: 20px;
-    } 
+    }
 
     & h2 {
         margin-top: 30px;
@@ -49,10 +45,10 @@
         max-width: 700px;
         background-color: $background-color;
 
-        & .underlined{
+        & .underlined {
             margin-top: 10px;
             margin-left: 20px;
-            width:40px;
+            width: 40px;
             border-bottom: 5px solid $green-color;
         }
 
@@ -66,13 +62,13 @@
     & .course {
         max-width: 100%;
         transform: translateX(-900px);
-        
+
     }
 
     & .dish {
         display: flex;
         align-items: flex-end;
-        
+
         margin: 20px;
         max-width: 100%;
         height: 70px;
@@ -81,10 +77,10 @@
         overflow: hidden;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.2);
 
-        &:hover{
-            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);            
+        &:hover {
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         }
-        
+
         &:hover .dish-price {
             animation: check-in 500ms;
         }
@@ -95,7 +91,7 @@
 
         &:hover .dish-name {
             width: calc(100% - 140px);
-            
+
         }
 
         & .dish-name {
@@ -103,10 +99,10 @@
             flex-direction: column;
             justify-content: space-evenly;
             padding: 15px;
-            
+
             width: calc(100% - 70px);
             height: 100%;
-            
+
 
             & h4 {
                 @include roboto-500-18;
@@ -132,8 +128,8 @@
             @include roboto-700-18;
             box-sizing: content-box;
             padding-bottom: 10px;
-            padding-right:20px;
-            
+            padding-right: 20px;
+
         }
 
         & .dish-check {
@@ -160,7 +156,7 @@
     animation: menus-in 2000ms 600ms forwards;
 }
 
-.three{
+.three {
     animation: menus-in 2000ms 900ms forwards;
 }
 
@@ -187,26 +183,10 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .restaurant {
-        &__header{
+        &__header {
             justify-content: center;
-        } 
+        }
+    }
 }
-}
-
-/*
-.hh{  
-    width: 200px;
-    height: 200px;
-    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
-}
-
-.hh img {
-    opacity:0; 
-    transition: opacity 1000ms;
-}
-
-.hh:hover img{
-    opacity: 1;
-}*/
