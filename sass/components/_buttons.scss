@@ -1,4 +1,4 @@
-.function-button{
+.function-button {
     display: flex;
     justify-content: center;
     margin: 10px;
@@ -12,23 +12,23 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     @include roboto-500-16;
 
-    &:hover{
+    &:hover {
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         background-color: $button-hover-color;
-        
+
         i {
             color: $primary-color;
         }
     }
 
-    &__number{
+    &__number {
         position: absolute;
-        height:1.5rem;
+        height: 1.5rem;
         width: 1.5rem;
-        padding-top:2px;
+        padding-top: 2px;
         align-self: center;
         left: 10px;
-        color: white;
+        color: $white-color;
         background-color: $primary-color;
         border-radius: 100px;
     }
@@ -39,61 +39,60 @@
         width: 15px;
     }
 
-    &__text{
+    &__text {
         width: 175px;
         text-align: start;
     }
-
-
 }
 
-.btn-gradient{
+.btn-gradient {
     background-color: $background-color;
     text-align: center;
-    padding:20px;
+    padding: 20px;
     background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    & h2{
+
+    & h2 {
         @include roboto-700-24;
         padding: 10px;
     }
-    & h3{
+
+    & h3 {
         @include roboto-300_18;
         padding: 10px;
-        margin-bottom:10px;
-        
+        margin-bottom: 10px;
     }
 
-    & #commander{
-        padding-left:40px;
+    & #commander {
+        padding-left: 40px;
         padding-right: 40px;
     }
 
-    & button{
+    & button {
         @include roboto-500_16;
         padding: 10px;
         border-radius: 25px;
         border: none;
         margin-bottom: 20px;
         background: $btn-gradient;
-        color: white;
+        color: $white-color;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
-        &:hover{
+        &:hover {
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
-    .function-button{
+    .function-button {
         width: 30%;
         position: relative;
-        padding-left:30px;
+        padding-left: 30px;
 
-        &__number{
-        position: absolute;
-        left: -10px;
+        &__number {
+            position: absolute;
+            left: -10px;
+        }
     }
-}
 }

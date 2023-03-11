@@ -15,11 +15,11 @@
             width: 100px;
             height: 100px;
             background: $btn-gradient;
-            animation: flipX 1s linear 3;
+            animation: rotate-around 1000ms linear 3;
         }
 }
 
-@keyframes flipX {
+@keyframes rotate-around {
     0% {
         transform: perspective(200px) rotateX(0deg) rotateY(0deg);
     }

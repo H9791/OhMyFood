@@ -5,30 +5,24 @@ html {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 body{
     max-width: 1440px;
     line-height: 1;
     @include roboto; 
-
 }
 
 *, *:before, *:after{
     box-sizing: border-box;
 }
 
-
-
 div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
-    
+    font: inherit; 
     text-size-adjust: none;
 }
 
@@ -40,8 +34,6 @@ a {
 footer, header, nav, section, main{
     display: block;
 }
-
-
 
 ol, ul{
     list-style: none;
@@ -62,7 +54,6 @@ table{
 }
 
 input{
-    /*-webkit-appearance: none;*/
     border-radius: 0;
 }
 

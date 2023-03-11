@@ -1,29 +1,25 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
-    color: white;
-    background-color: black;
-padding: 20px;
+    color: $white-color;
+    background-color: $black-color;
+    padding: 20px;
+
     & div {
-        margin-top:5px;
-        margin-bottom:5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
-    & .ml-10{
+    & .ml-10 {
         margin-left: 10px;
     }
 
-    & img{
-    
-    }
-
     & #contact {
-        color: white;
+        color: $white-color;
     }
-} 
+}
 
-.footer-title{
+.footer-title {
     font-family: 'Shrikhand', cursive;
     font-size: 2rem;
 }
-

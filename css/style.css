@@ -55,7 +55,6 @@ table {
 }
 
 input {
-  /*-webkit-appearance: none;*/
   border-radius: 0;
 }
 
@@ -89,7 +88,7 @@ input {
   padding-top: 2px;
   align-self: center;
   left: 10px;
-  color: white;
+  color: #fff;
   background-color: #9356DC;
   border-radius: 100px;
 }
@@ -134,8 +133,8 @@ input {
   border-radius: 25px;
   border: none;
   margin-bottom: 20px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  color: white;
+  background: linear-gradient(200deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .btn-gradient button:hover {
@@ -184,11 +183,11 @@ input {
   opacity: 1;
   width: 100px;
   height: 100px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  animation: flipX 1s linear 3;
+  background: linear-gradient(200deg, #9356DC -5.2%, #FF79DA 110.74%);
+  animation: rotate-around 1000ms linear 3;
 }
 
-@keyframes flipX {
+@keyframes rotate-around {
   0% {
     transform: perspective(200px) rotateX(0deg) rotateY(0deg);
   }
@@ -242,8 +241,8 @@ input {
 .footer {
   display: flex;
   flex-direction: column;
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #101010;
   padding: 20px;
 }
 .footer div {
@@ -254,7 +253,7 @@ input {
   margin-left: 10px;
 }
 .footer #contact {
-  color: white;
+  color: #fff;
 }
 
 .footer-title {
@@ -321,17 +320,16 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .restaurants__card.new::before {
   position: absolute;
   content: "Nouveau";
-  background-color: lightgreen;
+  background-color: #99E2D0;
   padding: 5px;
   right: 15px;
   top: 15px;
-  background-color: #99E2D0;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -349,28 +347,6 @@ input {
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px;
-}
-.restaurants__card__description .heart-icon {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  background: url("../assets/icons/h1.svg") center no-repeat;
-}
-.restaurants__card__description .heart-icon:hover {
-  animation-direction: forwards;
-  animation-name: fill-in;
-  animation-fill-mode: both;
-  animation-duration: 2000ms;
-  animation-timing-function: linear;
-  background: url("../assets/icons/h2.svg") center no-repeat;
-}
-@keyframes fill-in {
-  50% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .restaurants__card .restaurant-name h3 {
   font-weight: 700;
