@@ -8,8 +8,11 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
+
     width: 100%;
     height: 100%;
+
+
 }
 
 .restaurant {
@@ -61,14 +64,13 @@
 
     & .course {
         max-width: 100%;
-        transform: translateX(-900px);
+        transform: translateX(-1500px);
 
     }
 
     & .dish {
         display: flex;
         align-items: flex-end;
-
         margin: 20px;
         max-width: 100%;
         height: 70px;
@@ -81,17 +83,8 @@
             box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         }
 
-        &:hover .dish-price {
-            animation: check-in 500ms;
-        }
-
-        &:hover .dish-check {
-            animation: check-in 500ms;
-        }
-
         &:hover .dish-name {
             width: calc(100% - 140px);
-
         }
 
         & .dish-name {
@@ -99,10 +92,9 @@
             flex-direction: column;
             justify-content: space-evenly;
             padding: 15px;
-
             width: calc(100% - 70px);
             height: 100%;
-
+            transition: all 1000ms;
 
             & h4 {
                 @include roboto-500-18;
@@ -112,12 +104,10 @@
             }
 
             & p {
-
                 @include roboto-400-16;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-
             }
         }
 
@@ -129,7 +119,7 @@
             box-sizing: content-box;
             padding-bottom: 10px;
             padding-right: 20px;
-
+            /*transition: all 1000ms;*/
         }
 
         & .dish-check {
@@ -140,11 +130,9 @@
             height: 100%;
             width: 60px;
             background-color: $green-color;
-
+            /*transition: all 1000ms;*/
         }
-
     }
-
 }
 
 
@@ -160,26 +148,13 @@
     animation: menus-in 2000ms 900ms forwards;
 }
 
-
-
-
 @keyframes menus-in {
     from {
-        transform: translateX(-900px);
+        transform: translateX(-1500px);
     }
 
     to {
         transform: translateX(0px);
-    }
-}
-
-@keyframes check-in {
-    0% {
-        transform: translateX(60px);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
 

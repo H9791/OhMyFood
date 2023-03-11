@@ -59,7 +59,6 @@ input {
   border-radius: 0;
 }
 
-/********************TYPOGRAPHY************************/
 .function-button {
   display: flex;
   justify-content: center;
@@ -263,50 +262,6 @@ input {
   font-size: 2rem;
 }
 
-/* 
-.shape{
-    margin-top:200px;
-    margin-left: 200px;
-    width:200px;
-    height:200px;
-    background-color: red;
-    transform: rotate(-45deg);
-    position: relative;
-    border-bottom: 10px solid black;
-    border-left: 10px solid black;
-    box-sizing: border-box;
-    z-index:5;
-
-}
-
-.shape::before{
-    content: "";
-    height: 200px;
-    width: 200px;
-    background-color:orange;
-    position: absolute;
-    border-radius: 50%;
-    top: -100px;
-    left:0px;
-    border-top: 10px solid black;
-    border-left: 10px solid black;
-    box-sizing: content-box;
-    z-index: -5;
-}
-
-.shape::after{
-    content: "";
-    height: 200px;
-    width: 200px;
-    background-color: yellow;;
-    position: absolute;
-    border-radius: 100%;
-    left: 100px;
-    top:0px;
-    border-right: 10px solid black;
-    z-index: -5;
-}
- */
 .place {
   text-align: center;
   padding: 10px;
@@ -428,14 +383,6 @@ input {
   line-height: 20px;
 }
 
-/*
-.new::before{
-    position: absolute;
-    content: 'Nouveau';
-    background-color: lightgreen;
-    padding:5px;
-
-}*/
 @media screen and (min-width: 768px) {
   .functioning .three-buttons {
     flex-direction: row;
@@ -526,7 +473,7 @@ input {
 }
 .restaurant .course {
   max-width: 100%;
-  transform: translateX(-900px);
+  transform: translateX(-1500px);
 }
 .restaurant .dish {
   display: flex;
@@ -542,12 +489,6 @@ input {
 .restaurant .dish:hover {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
-.restaurant .dish:hover .dish-price {
-  animation: check-in 500ms;
-}
-.restaurant .dish:hover .dish-check {
-  animation: check-in 500ms;
-}
 .restaurant .dish:hover .dish-name {
   width: calc(100% - 140px);
 }
@@ -558,6 +499,7 @@ input {
   padding: 15px;
   width: calc(100% - 70px);
   height: 100%;
+  transition: all 1000ms;
 }
 .restaurant .dish .dish-name h4 {
   font-weight: 500;
@@ -585,6 +527,7 @@ input {
   box-sizing: content-box;
   padding-bottom: 10px;
   padding-right: 20px;
+  /*transition: all 1000ms;*/
 }
 .restaurant .dish .dish-check {
   display: flex;
@@ -594,6 +537,7 @@ input {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
+  /*transition: all 1000ms;*/
 }
 
 .one {
@@ -610,42 +554,16 @@ input {
 
 @keyframes menus-in {
   from {
-    transform: translateX(-900px);
+    transform: translateX(-1500px);
   }
   to {
     transform: translateX(0px);
-  }
-}
-@keyframes check-in {
-  0% {
-    transform: translateX(60px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 @media screen and (min-width: 768px) {
   .restaurant__header {
     justify-content: center;
   }
-}
-/*
-.hh{  
-    width: 200px;
-    height: 200px;
-    background: url("../assets/icons/Heart-regular.svg") no-repeat center;
-}
-
-.hh img {
-    opacity:0; 
-    transition: opacity 1000ms;
-}
-
-.hh:hover img{
-    opacity: 1;
-}*/
-.b {
-  border: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
