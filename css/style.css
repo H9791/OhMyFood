@@ -70,13 +70,13 @@ input {
   border: none;
   white-space: nowrap;
   background-color: #f7f7f7;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 }
 .function-button:hover {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   background-color: #F5EDFF;
 }
 .function-button:hover i {
@@ -333,7 +333,7 @@ input {
   margin-bottom: 10px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .restaurants__card.new::before {
   position: absolute;
@@ -347,7 +347,7 @@ input {
   line-height: 17px;
 }
 .restaurants__card:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .restaurants__card__img {
   height: 200px;
@@ -472,10 +472,10 @@ input {
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .restaurant .dish:hover {
-  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .restaurant .dish:hover .dish-name {
   width: calc(100% - 140px);
