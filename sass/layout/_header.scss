@@ -11,11 +11,12 @@
 }
 
 .header-resto {
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    /*margin-top: 15px;
+    margin-bottom: 15px;*/
 
     &__arrow-container {
         margin-left: 40px;
@@ -34,5 +35,18 @@
 
     & .header__text {
         position: absolute;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+
+    .header-resto{
+        position: relative;
+        
+        &__arrow-container{
+            position: absolute;
+            left: 30px;
+        }
     }
 }
